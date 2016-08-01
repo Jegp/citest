@@ -7,3 +7,7 @@ repositories {
 dependencies {
   testCompile 'junit:junit:4.12'
 }
+
+task gitTag(type: Exec) {
+ commandLine 'sh', '-c', 'git tag -a $(($(git describe --tag) + 1)) -m "New release"'
+}
