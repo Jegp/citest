@@ -1,0 +1,3 @@
+task gitTag(type: Exec) {
+ commandLine 'sh', '-c', 'git tag -a $(($(git describe --tag) + 1)) -m "New release"'
+}
