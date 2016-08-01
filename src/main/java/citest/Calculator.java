@@ -9,13 +9,11 @@ package citest;
  *
  * @author jens
  */
-public class Citest {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public class Calculator {
+  public int evaluate(String expression) {
+    int sum = 0;
+    for (String summand: expression.split("\\+"))
+      sum += Integer.valueOf(summand);
+    return sum;
+  }
 }
